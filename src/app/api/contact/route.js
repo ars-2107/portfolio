@@ -23,8 +23,6 @@ export async function POST(req, res) {
     });
     return NextResponse.json(data);
   } catch (error) {
-    console.error("Error occurred:", error);
-    console.log("API Key:", process.env.RESEND_API_KEY);
     return NextResponse.json({ error });
   }
 }
