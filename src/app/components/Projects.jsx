@@ -11,8 +11,8 @@ const projectsData = [
     description: "An immersive platform for movie enthusiasts to discover, rate, and review films.",
     image: "/images/projects/raveo-thumbnail.png",
     tag: ["All", "Web Development", "Machine Learning"],
-    gitUrl: "/",
-    previewUrl: "/",
+    gitUrl: "https://github.com/ars-2107/raveo/",
+    previewUrl: "https://raveo.vercel.app/",
   },
   {
     id: 1,
