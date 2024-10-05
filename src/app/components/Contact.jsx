@@ -1,5 +1,6 @@
 "use client";
 import React, { useState } from "react";
+import InstagramIcon from "../../../public/instagram-icon.svg";
 import GithubIcon from "../../../public/github-icon.svg";
 import LinkedinIcon from "../../../public/linkedin-icon.svg";
 import Link from "next/link";
@@ -34,7 +35,6 @@ const Contact = () => {
     const resData = await response.json();
 
     if (response.status === 200) {
-      console.log("Message sent.");
       setEmailSubmitted(true);
     }
   };
@@ -55,11 +55,16 @@ const Contact = () => {
           I&apos;ll make it a priority to respond promptly! Looking forward to connecting with you.
         </p>
         <div className="socials flex flex-row gap-2">
-          <Link href="https://github.com/ars-2107">
-            <Image src={GithubIcon} alt="Github Icon" />
+          <Link href="https://www.linkedin.com/in/apoorvsharma2107/">
+            <Image src={LinkedinIcon} alt="X Icon" />
+          </Link><Link href="https://www.instagram.com/ars2107_/">
+            <Image src={InstagramIcon} alt="Instagram Icon" />
           </Link>
           <Link href="https://www.linkedin.com/in/apoorvsharma2107/">
             <Image src={LinkedinIcon} alt="Linkedin Icon" />
+          </Link>
+          <Link href="https://github.com/ars-2107/">
+            <Image src={GithubIcon} alt="Github Icon" />
           </Link>
         </div>
       </div>
