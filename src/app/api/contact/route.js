@@ -114,7 +114,7 @@ export async function POST(req) {
       ),
     });
 
-    await resend.emails.send({
+    const response =await resend.emails.send({
       from: fromEmail,
       to: [fromEmail, otherEmail],
       subject: `New Message from ${email}: ${subject}`,
@@ -218,7 +218,7 @@ export async function POST(req) {
       `
       ),
     });
-
+    console.log(response);
     return NextResponse.json({ message: "Email sent successfully" });
   } catch (error) {
     console.error("Error sending email:", error);
