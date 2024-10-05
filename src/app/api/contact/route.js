@@ -110,7 +110,7 @@ export async function POST(req) {
     await resend.emails.send({
       from: fromEmail,
       to: email,
-      subject,
+      subject: "Thank You for Reaching Out!",
       react: emailTemplate(subject, message),
     });
 

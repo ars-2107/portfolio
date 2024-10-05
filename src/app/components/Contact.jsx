@@ -1,5 +1,6 @@
 "use client";
 import React, { useState } from "react";
+import XIcon from "../../../public/x-icon.svg";
 import InstagramIcon from "../../../public/instagram-icon.svg";
 import GithubIcon from "../../../public/github-icon.svg";
 import LinkedinIcon from "../../../public/linkedin-icon.svg";
@@ -54,9 +55,9 @@ const Contact = () => {
           Whether you have a question, want to discuss a project or just want to say hi,
           I&apos;ll make it a priority to respond promptly! Looking forward to connecting with you.
         </p>
-        <div className="socials flex flex-row gap-2">
+        <div className="socials flex flex-row gap-4">
           <Link href="https://www.linkedin.com/in/apoorvsharma2107/">
-            <Image src={LinkedinIcon} alt="X Icon" />
+            <Image src={XIcon} alt="X Icon" />
           </Link><Link href="https://www.instagram.com/ars2107_/">
             <Image src={InstagramIcon} alt="Instagram Icon" />
           </Link>
