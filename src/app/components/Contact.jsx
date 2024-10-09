@@ -20,15 +20,11 @@ const Contact = () => {
     const JSONdata = JSON.stringify(data);
     const endpoint = "/api/contact";
 
-    // Form the request for sending data to the server.
     const options = {
-      // The method is POST because we are sending data.
       method: "POST",
-      // Tell the server we're sending JSON.
       headers: {
         "Content-Type": "application/json",
       },
-      // Body of the request is the JSON data we created above.
       body: JSONdata,
     };
 
@@ -45,7 +41,7 @@ const Contact = () => {
       id="contact"
       className="grid md:grid-cols-2 my-12 md:my-12 py-24 gap-4 relative"
     >
-      <div className="z-10">
+      <div>
         <h5 className="text-xl font-bold text-white my-2">
           Let&apos;s Connect
         </h5>
@@ -55,18 +51,27 @@ const Contact = () => {
           Whether you have a question, want to discuss a project or just want to say hi,
           I&apos;ll make it a priority to respond promptly! Looking forward to connecting with you.
         </p>
-        <div className="socials flex flex-row gap-4">
-          <Link href="https://www.linkedin.com/in/apoorvsharma2107/">
+        <div className="socials flex flex-row gap-4 mt-8">
+        <Link href="https://www.x.com/in/ars2107_/">
+          <div className="border-2 border-transparent hover:border-purple-800 hover:shadow-[0_0_15px_theme('colors.purple.800')] transition-all duration-300 p-2 rounded-md">
             <Image src={XIcon} alt="X Icon" />
-          </Link><Link href="https://www.instagram.com/ars2107_/">
+          </div>
+        </Link>
+        <Link href="https://www.instagram.com/ars2107_/">
+          <div className="border-2 border-transparent hover:border-purple-800 hover:shadow-[0_0_15px_theme('colors.purple.800')] transition-all duration-300 p-2 rounded-md">
             <Image src={InstagramIcon} alt="Instagram Icon" />
-          </Link>
-          <Link href="https://www.linkedin.com/in/apoorvsharma2107/">
+          </div>
+        </Link>
+        <Link href="https://www.linkedin.com/in/apoorvsharma2107/">
+          <div className="border-2 border-transparent hover:border-purple-800 hover:shadow-[0_0_15px_theme('colors.purple.800')] transition-all duration-300 p-2 rounded-md">
             <Image src={LinkedinIcon} alt="Linkedin Icon" />
-          </Link>
-          <Link href="https://github.com/ars-2107/">
+          </div>
+        </Link>
+        <Link href="https://github.com/ars-2107/">
+          <div className="border-2 border-transparent hover:border-purple-800 hover:shadow-[0_0_15px_theme('colors.purple.800')] transition-all duration-300 p-2 rounded-md">
             <Image src={GithubIcon} alt="Github Icon" />
-          </Link>
+          </div>
+        </Link>
         </div>
       </div>
       <div>
@@ -118,7 +123,7 @@ const Contact = () => {
               <textarea
                 name="message"
                 id="message"
-                className="bg-[#18191E] border border-[#33353F] placeholder-[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5"
+                className="bg-[#18191E] border border-[#33353F] placeholder-[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5 h-40 resize-none no-scrollbar"
                 placeholder="Let's talk about..."
               />
             </div>

@@ -9,7 +9,7 @@ export async function POST(req) {
   const { subject, message, email } = await req.json();
 
   try {
-    await resend.emails.send({
+    const userResponse = await resend.emails.send({
       from: fromEmail,
       to: email,
       subject: "Thank You for Reaching Out!",
@@ -114,7 +114,7 @@ export async function POST(req) {
       ),
     });
 
-    const response =await resend.emails.send({
+    const adminResponse = await resend.emails.send({
       from: fromEmail,
       to: [fromEmail, otherEmail],
       subject: `New Message from ${email}: ${subject}`,
@@ -218,8 +218,9 @@ export async function POST(req) {
       `
       ),
     });
-    console.log(response);
-    return NextResponse.json({ message: "Email sent successfully" });
+
+    if (!!userResponse && !!adminResponse) return NextResponse.json({ message: "Email sent successfully" });
+    else return NextResponse.json({ message: "Failed to send email" });
   } catch (error) {
     console.error("Error sending email:", error);
     return NextResponse.json({ message: "Failed to send email" }, { status: 500 });

@@ -10,7 +10,7 @@ const projectsData = [
     title: "Raveo",
     description: "An immersive platform for movie enthusiasts to discover, rate, and review films.",
     image: "/images/projects/raveo-thumbnail.png",
-    tag: ["All", "Web Development", "Machine Learning"],
+    tag: ["All", "Web Development"],
     gitUrl: "https://github.com/ars-2107/raveo/",
     previewUrl: "https://raveo.vercel.app/",
   },
@@ -45,10 +45,10 @@ const Projects = () => {
 
   return (
     <section id="projects">
-      <h2 className="text-center text-4xl font-bold text-white mt-4 mb-8 md:mb-12">
+      <h2 className="text-center text-4xl font-bold text-white mt-4 mb-6 md:mb-8">
         My Projects
       </h2>
-      <div className="text-white flex flex-wrap justify-center items-center gap-2 py-6">
+      <div className="text-white flex flex-wrap justify-center mb-4 items-center gap-2 py-6">
         <ProjectTag
           onClick={handleTagChange}
           name="All"
@@ -58,6 +58,16 @@ const Projects = () => {
           onClick={handleTagChange}
           name="Web Development"
           isSelected={tag === "Web Development"}
+        />
+        <ProjectTag
+          onClick={handleTagChange}
+          name="Mobile Development"
+          isSelected={tag === "Mobile Development"}
+        />
+        <ProjectTag
+          onClick={handleTagChange}
+          name="Data Science"
+          isSelected={tag === "Data Science"}
         />
         <ProjectTag
           onClick={handleTagChange}
