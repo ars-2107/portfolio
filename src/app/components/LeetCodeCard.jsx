@@ -20,7 +20,7 @@ const LeetCodeCard = ({ stats, loadingStats }) => {
         </div>
       ) : stats ? (
         <>
-          <p className="text-md font-semibold mb-4 text-white flex justify-between items-center">
+          <p className="text-md font-semibold text-white flex justify-between items-center">
             <div>
               <Image src={LeetCodeIcon} alt={`Leetcode Icon`} className="mt-2 mx-2 mb-4 inline" width={36} height={36} />
               <h3 className="text-xl font-semibold text-white inline">ars2107_</h3>
@@ -28,11 +28,11 @@ const LeetCodeCard = ({ stats, loadingStats }) => {
             <p className="text-md text-gray-500">#{stats.ranking}</p>
           </p>
 
-          <div className="grid grid-cols-5 gap-2 items-start">
+          <div className="grid grid-cols-5 gap-2 items-start mb-2">
             <div className="flex justify-center align-middle col-span-2">
               <div className="flex justify-center items-center w-36 h-36 rounded-full relative">
                 <svg width="100%" height="100%" viewBox="0 0 36 36" className="absolute transform rotate-180">
-                  <circle cx="18" cy="18" r="16" stroke="#eee" strokeWidth="2" fill="rgba(107, 33, 168, 0.1)" />
+                  <circle cx="18" cy="18" r="16" stroke="#1C0E2B" strokeWidth="2" fill="rgba(0, 0, 0, 0)" />
                 </svg>
                 <svg width="100%" height="100%" viewBox="0 0 36 36" className="absolute transform -rotate-90">
                   <circle
@@ -52,8 +52,8 @@ const LeetCodeCard = ({ stats, loadingStats }) => {
 
             <div className="col-span-3">
               <div className="mb-1">
-                <p className="text-white text-sm mb-1">Easy Solved:</p>
-                <div className="w-full bg-gray-300 rounded-full h-1">
+                <p className="text-white text-sm mb-1">Easy</p>
+                <div className="w-full bg-[#1C0E2B] rounded-full h-1">
                   <div
                     className="bg-green-500 h-1 rounded-full"
                     style={{ width: `${(stats.easySolved / stats.totalEasy) * 100}%` }}
@@ -65,8 +65,8 @@ const LeetCodeCard = ({ stats, loadingStats }) => {
               </div>
 
               <div className="mb-1">
-                <p className="text-white text-sm mb-1">Medium Solved:</p>
-                <div className="w-full bg-gray-300 rounded-full h-1">
+                <p className="text-white text-sm mb-1">Medium</p>
+                <div className="w-full bg-[#1C0E2B] rounded-full h-1">
                   <div
                     className="bg-yellow-500 h-1 rounded-full"
                     style={{ width: `${(stats.mediumSolved / stats.totalMedium) * 100}%` }}
@@ -78,8 +78,8 @@ const LeetCodeCard = ({ stats, loadingStats }) => {
               </div>
 
               <div className="mb-1">
-                <p className="text-white text-sm mb-1">Hard Solved:</p>
-                <div className="w-full bg-gray-300 rounded-full h-1">
+                <p className="text-white text-sm mb-1">Hard</p>
+                <div className="w-full bg-[#1C0E2B] rounded-full h-1">
                   <div
                     className="bg-red-500 h-1 rounded-full"
                     style={{ width: `${(stats.hardSolved / stats.totalHard) * 100}%` }}
