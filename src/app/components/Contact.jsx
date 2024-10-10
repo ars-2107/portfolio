@@ -9,9 +9,11 @@ import Image from "next/image";
 
 const Contact = () => {
   const [emailSubmitted, setEmailSubmitted] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setIsLoading(true);
     const data = {
       email: e.target.email.value,
       subject: e.target.subject.value,
@@ -28,17 +30,24 @@ const Contact = () => {
       body: JSONdata,
     };
 
-    const response = await fetch(endpoint, options);
-    const resData = await response.json();
+    try {
+      const response = await fetch(endpoint, options);
+      const resData = await response.json();
 
-    if (response.status === 200) {
-      setEmailSubmitted(true);
+      if (response.status === 200) {
+        setEmailSubmitted(true);
+      } else {
+        console.error("Something went wrong, please try again.");
+      }
+    } catch (error) {
+      console.error("An error occurred, please try again.")
+    } finally {
+      setIsLoading(false);
     }
   };
 
   return (
     <section
-      id="contact"
       className="grid md:grid-cols-2 my-12 md:my-12 py-24 gap-4 relative"
     >
       <div>
@@ -76,9 +85,22 @@ const Contact = () => {
       </div>
       <div>
         {emailSubmitted ? (
-          <p className="text-green-500 text-center text-lg mt-2">
-            Email sent successfully!
-          </p>
+          <div className="flex flex-col items-center justify-center h-[250px]">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="48px" height="48px">
+              <circle cx="12" cy="12" r="12" fill="#9333ea"/>
+              <path d="M9 16.2l-3.5-3.5a1 1 0 011.4-1.4l2.1 2.1 5.6-5.6a1 1 0 011.4 1.4l-6.6 6.6a1 1 0 01-1.4 0z" fill="#ffffff" transform="translate(1, 0)"/>
+            </svg>
+            <p className="text-purple-600 text-center text-lg mt-2 neon-text">
+              Email sent successfully!
+            </p>
+            <button
+              onClick={() => {setEmailSubmitted(false)}}
+              className="mt-6 px-4 py-2 text-purple-600 border-2 border-purple-600 bg-transparent text-sm font-semibold rounded-full 
+              transform transition duration-300 ease-in-out hover:bg-purple-800 hover:bg-opacity-20"
+            >
+              Go Back
+            </button>
+          </div>
         ) : (
           <form className="flex flex-col" onSubmit={handleSubmit}>
             <div className="mb-6">
@@ -131,7 +153,11 @@ const Contact = () => {
               type="submit"
               className="bg-secondary-600 hover:bg-secondary-800 text-white font-medium py-2.5 px-5 rounded-lg w-full"
             >
-              Send Message
+              {isLoading ? (
+                <span>Sending...</span>
+              ) : (
+                <span>Send Message</span>
+              )}
             </button>
           </form>
         )}

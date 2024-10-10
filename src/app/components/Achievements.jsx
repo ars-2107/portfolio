@@ -62,6 +62,7 @@ const Achievements = () => {
           );
         })}
       </div>
+      <section id="about"></section>
     </div>
   );
 };

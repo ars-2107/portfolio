@@ -1,8 +1,9 @@
 "use client";
-import React, { useTransition, useState } from "react";
+import React, { useTransition, useState, useEffect } from "react";
 import { Roboto } from 'next/font/google';
 import Image from "next/image";
 import TabButton from "./TabButton";
+import LeetCodeCard from "./LeetCodeCard";
 
 import AwsIcon from "../../../public/images/skills/aws-icon.svg";
 import BootstrapIcon from "../../../public/images/skills/bootstrap-icon.svg";
@@ -50,7 +51,9 @@ const TAB_DATA = [
     title: "Skills",
     id: "skills",
     content: (
-      <div className={`grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 ${roboto.className}`}>
+      <div
+      className={`grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 ${roboto.className} max-h-[520px] pr-4 overflow-y-auto scroll-smooth scrollbar scrollbar-thin scrollbar-thumb-purple-800 scrollbar-track-transparent scrollbar-rounded-md`}
+      >
         {[{ name: "Java", icon: JavaIcon },
           { name: "Python", icon: PythonIcon },
           { name: "JavaScript", icon: JavascriptIcon },
@@ -118,6 +121,16 @@ const TAB_DATA = [
       <>
         <div className={`bg-zinc-950 shadow-md rounded-lg p-6 border border-purple-800 mb-4 ${roboto.className}`}>
           <div className="flex flex-wrap justify-between items-center mb-2">
+            <h3 className="text-xl font-semibold">Nest</h3>
+            <span className="text-xs text-gray-500">Jun 2024 - Present</span>
+          </div>
+          <div className="flex flex-wrap justify-between items-center">
+            <span className="text-md">Mobile Developer</span>
+            <span className="text-xs text-gray-500">Full Time</span>
+          </div>
+        </div>
+        <div className={`bg-zinc-950 shadow-md rounded-lg p-6 border border-purple-800 mb-4 ${roboto.className}`}>
+          <div className="flex flex-wrap justify-between items-center mb-2">
             <h3 className="text-xl font-semibold">Asynchron</h3>
             <span className="text-xs text-gray-500">Nov 2023 - Jan 2024</span>
           </div>
@@ -154,11 +167,60 @@ const TAB_DATA = [
       </div>
     ),
   },
+  {
+    title: "Stats",
+    id: "stats",
+    content: null,
+  },
 ];
 
 const About = () => {
   const [tab, setTab] = useState("skills");
   const [isPending, startTransition] = useTransition();
+  const [leetCodeStats, setLeetCodeStats] = useState(null);
+  const [gitHubStats, setGitHubStats] = useState(null);
+  const [loadingStats, setLoadingStats] = useState(true);
+
+  useEffect(() => {
+    if (tab === "stats") {
+      const fetchLeetCodeStats = async () => {
+        try {
+          const response = await fetch('https://leetcode-stats-api.herokuapp.com/ars2107_');
+          const data = await response.json();
+          if (data.status === "success") {
+            setLeetCodeStats(data);
+          }
+        } catch (error) {
+          console.error("Error fetching LeetCode stats:", error);
+        } finally {
+          setLoadingStats(false);
+        }
+      };
+      fetchLeetCodeStats();
+      const fetchGitHubStats = async () => {
+        try {
+          const response = await fetch('https://api.github.com/users/ars2107_');
+          const data = await response.json();
+          
+          if (response.ok) {
+            setGitHubStats({
+              publicRepos: data.public_repos,
+              followers: data.followers,
+              following: data.following,
+              stars: data.public_gists,
+            });
+          } else {
+            console.error("Error fetching GitHub stats:", data.message);
+          }
+        } catch (error) {
+          console.error("Error fetching GitHub stats:", error);
+        } finally {
+          setLoadingStats(false);
+        }
+      };
+      fetchGitHubStats();
+    }
+  }, [tab]);
 
   const handleTabChange = (id) => {
     startTransition(() => {
@@ -167,7 +229,7 @@ const About = () => {
   };
 
   return (
-    <section className="text-white" id="about">
+    <section className="text-white">
       <div className="md:grid md:grid-cols-2 gap-8 py-8 px-4 xl:gap-16 sm:py-16 xl:px-16">
         <Image className="z-0" src="/images/about.png" alt="about" width={500} height={500} />
         <div className="mt-4 md:mt-0 text-left flex flex-col h-full">
@@ -210,14 +272,31 @@ const About = () => {
               {" "}
               Certifications{" "}
             </TabButton>
+            <TabButton
+              selectTab={() => handleTabChange("stats")}
+              active={tab === "stats"}
+            >
+              {" "}
+              Stats{" "}
+            </TabButton>
           </div>
-          <div className="mt-8">
-            {tab === "skills" ? (
+          <div className="mt-8 ">
+            {tab === "skills" || tab === "education" || tab === "experience" || tab === "certifications" ? (
               TAB_DATA.find((t) => t.id === tab).content
             ) : (
-              <div>{TAB_DATA.find((t) => t.id === tab).content}</div>
+              <div className="max-w-[600px] pr-4 pb-2 flex overflow-x-auto scroll-smooth scrollbar scrollbar-thin scrollbar-thumb-purple-800 scrollbar-track-transparent scrollbar-rounded-md">
+              <LeetCodeCard stats={leetCodeStats} loadingStats={loadingStats} />
+              <Image
+                src="https://github-readme-stats.vercel.app/api?username=ars-2107&theme=transparent&title_color=6b21a8&text_color=ffffff&icon_color=6b21a8&show_icons=true&hide_border=true"
+                alt="GitHub Stats"
+                width={550}
+                height={200}
+                className={`bg-zinc-950 w-[550px] flex-none mx-5 shadow-md rounded-lg border border-purple-800 mb-4 ${roboto.className}`}
+              />
+              </div>
             )}
           </div>
+          <section id="projects"></section>
         </div>
       </div>
     </section>

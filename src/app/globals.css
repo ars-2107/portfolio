@@ -21,11 +21,32 @@
   .no-scrollbar::-webkit-scrollbar {
       display: none;
   }
+  
  /* Hide scrollbar for IE, Edge and Firefox */
   .no-scrollbar {
       -ms-overflow-style: none;  /* IE and Edge */
       scrollbar-width: none;  /* Firefox */
-}
+  }
+
+  .scrollbar::-webkit-scrollbar {
+    width: 4px;
+    height: 6px;
+  }
+  
+  .scrollbar::-webkit-scrollbar-track {
+    border-radius: 100vh;
+    background: #1e1e1e;
+  }
+  
+  .scrollbar::-webkit-scrollbar-thumb {
+    background: #581c87;
+    border-radius: 100vh;
+    box-shadow: 0 0 8px 2px rgba(88, 28, 135, 0.6);
+  }
+  
+  .scrollbar::-webkit-scrollbar-thumb:hover {
+    background: #9b4d96;
+  }
 }
 
 body {
