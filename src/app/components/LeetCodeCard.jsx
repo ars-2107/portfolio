@@ -13,7 +13,7 @@ const roboto = Roboto({
 const LeetCodeCard = ({ stats, loadingStats }) => {
 
   return (
-    <div className={`bg-zinc-950 w-[550px] flex-none mx-5 shadow-md rounded-lg p-6 border border-purple-800 mb-4 ${roboto.className}`}>
+    <div className={`bg-zinc-950 w-[550px] flex-none mx-5 shadow-md rounded-lg p-3 pr-6 border border-purple-800 mb-4 ${roboto.className}`}>
       {loadingStats ? (
         <div className="flex justify-center items-center text-white">
           <p>Loading stats...</p>
