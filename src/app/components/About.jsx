@@ -178,7 +178,6 @@ const About = () => {
   const [tab, setTab] = useState("skills");
   const [isPending, startTransition] = useTransition();
   const [leetCodeStats, setLeetCodeStats] = useState(null);
-  const [gitHubStats, setGitHubStats] = useState(null);
   const [loadingStats, setLoadingStats] = useState(true);
 
   useEffect(() => {
@@ -197,28 +196,6 @@ const About = () => {
         }
       };
       fetchLeetCodeStats();
-      const fetchGitHubStats = async () => {
-        try {
-          const response = await fetch('https://api.github.com/users/ars2107_');
-          const data = await response.json();
-          
-          if (response.ok) {
-            setGitHubStats({
-              publicRepos: data.public_repos,
-              followers: data.followers,
-              following: data.following,
-              stars: data.public_gists,
-            });
-          } else {
-            console.error("Error fetching GitHub stats:", data.message);
-          }
-        } catch (error) {
-          console.error("Error fetching GitHub stats:", error);
-        } finally {
-          setLoadingStats(false);
-        }
-      };
-      fetchGitHubStats();
     }
   }, [tab]);
 
@@ -285,14 +262,15 @@ const About = () => {
               TAB_DATA.find((t) => t.id === tab).content
             ) : (
               <div className="max-w-[600px] pr-4 pb-2 flex overflow-x-auto scroll-smooth scrollbar scrollbar-thin scrollbar-thumb-purple-800 scrollbar-track-transparent scrollbar-rounded-md">
-              <LeetCodeCard stats={leetCodeStats} loadingStats={loadingStats} />
-              <Image
-                src="https://github-readme-stats.vercel.app/api?username=ars-2107&theme=transparent&title_color=6b21a8&text_color=ffffff&icon_color=6b21a8&show_icons=true&hide_border=true"
-                alt="GitHub Stats"
-                width={550}
-                height={200}
-                className={`bg-zinc-950 w-[550px] flex-none mx-5 shadow-md rounded-lg border border-purple-800 mb-4 ${roboto.className}`}
-              />
+                <LeetCodeCard stats={leetCodeStats} loadingStats={loadingStats} />
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src="https://github-readme-stats.vercel.app/api?username=ars-2107&theme=transparent&title_color=6b21a8&text_color=ffffff&icon_color=6b21a8&show_icons=true&hide_border=true"
+                  alt="GitHub Stats"
+                  width={550}
+                  height={200}
+                  className={`bg-zinc-950 w-[550px] flex-none mx-5 shadow-md rounded-lg border border-purple-800 mb-4 ${roboto.className}`}
+                />
               </div>
             )}
           </div>
