@@ -93,7 +93,7 @@ const TAB_DATA = [
         ].map((skill, index) => (
           <div key={index} className="bg-zinc-950 shadow-md rounded-lg p-4 flex flex-col items-center mb-4 border border-purple-800">
             <Image src={skill.icon} alt={`${skill.name} Icon`} className="m-5 text-white fill-current" width={48} height={48} />
-            <span className="text-center text-white">{skill.name}</span>
+            <span className="text-center text-white text-sm sm:text-base md:text-md lg:text-lg">{skill.name}</span>
           </div>
         ))}
       </div>
