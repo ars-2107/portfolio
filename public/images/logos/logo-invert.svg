@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="svg5" version="1.1" viewBox="0 159.1296 514.8672 165.888" style="max-height: 500px" width="514.8672" height="165.888">
+  
+  <defs id="defs2">
+    <linearGradient id="linearGradient21899">
+      <stop id="stop21895" offset="0" style="stop-color:#f87171;stop-opacity:1;"/>
+      <stop id="stop21897" offset="1" style="stop-color:#9333ea;stop-opacity:1"/>
+    </linearGradient>
+    <linearGradient gradientTransform="translate(8.8067093,43.213263)" gradientUnits="userSpaceOnUse" y2="256.74631" x2="498.5795" y1="256.74631" x1="452.71278" id="linearGradient21901" xlink:href="#linearGradient21899"/>
+  </defs>
+  <g id="layer1">
+    <text id="text3649" y="319.71686" x="-5.6422267" style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:280px;line-height:1.25;font-family:Poppins;-inkscape-font-specification:'Poppins, Semi-Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#ffffff" xml:space="preserve"><tspan y="319.71686" x="-5.6422267" id="tspan3647">ars</tspan></text>
+    <text id="text10651" y="319.95959" x="449.78616" style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:282.667px;line-height:1.25;font-family:Poppins;-inkscape-font-specification:'Poppins, Semi-Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;mix-blend-mode:normal;fill:url(#linearGradient21901);fill-opacity:1;fill-rule:evenodd" xml:space="preserve"><tspan style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:282.667px;font-family:Poppins;-inkscape-font-specification:'Poppins, Semi-Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:url(#linearGradient21901);fill-opacity:1;fill-rule:evenodd" y="319.95959" x="449.78616" id="tspan10649">.</tspan></text>
+  </g>
+</svg>

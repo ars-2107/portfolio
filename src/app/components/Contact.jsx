@@ -1,9 +1,9 @@
 "use client";
 import React, { useState } from "react";
-import XIcon from "../../../public/x-icon.svg";
-import InstagramIcon from "../../../public/instagram-icon.svg";
-import GithubIcon from "../../../public/github-icon.svg";
-import LinkedinIcon from "../../../public/linkedin-icon.svg";
+import XIcon from "../../../public/images/socials/x-icon.svg";
+import InstagramIcon from "../../../public/images/socials/instagram-icon.svg";
+import GithubIcon from "../../../public/images/socials/github-icon.svg";
+import LinkedinIcon from "../../../public/images/socials/linkedin-icon.svg";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -108,7 +108,7 @@ const Contact = () => {
                 htmlFor="email"
                 className="text-white block mb-2 text-sm font-medium"
               >
-                Your email
+                Your Email
               </label>
               <input
                 name="email"

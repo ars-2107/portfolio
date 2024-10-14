@@ -17,7 +17,7 @@ const projectsData = [
   {
     id: 1,
     title: "Web-X",
-    description: "Empowering you to effortlessly create engaging articles and blogs with precision and ease.",
+    description: "Empowering you to effortlessly create articles and blogs with precision and ease.",
     image: "/images/projects/web-x-thumbnail.png",
     tag: ["All", "Web Development"],
     gitUrl: "https://github.com/ars-2107/web-x",
