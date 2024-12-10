@@ -6,11 +6,19 @@ import { motion, useInView } from "framer-motion";
 
 const projectsData = [
   {
+    id: 3,
+    title: "Nest",
+    description: "A real estate CRM designed to manage leads and boost team productivity.",
+    image: "/images/projects/nest-thumbnail.png",
+    tag: ["All", "Mobile"],
+    previewUrl: "https://play.google.com/store/apps/details?id=com.nestcrm.app",
+  },
+  {
     id: 2,
     title: "Raveo",
-    description: "An immersive platform for movie enthusiasts to discover, rate, and review films.",
+    description: "An ultimate platform for movie enthusiasts to discover, rate, and review films.",
     image: "/images/projects/raveo-thumbnail.png",
-    tag: ["All", "Web Development"],
+    tag: ["All", "Web"],
     gitUrl: "https://github.com/ars-2107/raveo/",
     previewUrl: "https://raveo.vercel.app/",
   },
@@ -19,7 +27,7 @@ const projectsData = [
     title: "Web-X",
     description: "Empowering you to effortlessly create articles and blogs with precision and ease.",
     image: "/images/projects/web-x-thumbnail.png",
-    tag: ["All", "Web Development"],
+    tag: ["All", "Web"],
     gitUrl: "https://github.com/ars-2107/web-x",
     previewUrl: "https://web-x-01.vercel.app/",
   },
@@ -56,23 +64,18 @@ const Projects = () => {
         />
         <ProjectTag
           onClick={handleTagChange}
-          name="Web Development"
-          isSelected={tag === "Web Development"}
+          name="Web"
+          isSelected={tag === "Web"}
         />
         <ProjectTag
           onClick={handleTagChange}
-          name="Mobile Development"
-          isSelected={tag === "Mobile Development"}
+          name="Mobile"
+          isSelected={tag === "Mobile"}
         />
         <ProjectTag
           onClick={handleTagChange}
-          name="Data Science"
-          isSelected={tag === "Data Science"}
-        />
-        <ProjectTag
-          onClick={handleTagChange}
-          name="Machine Learning"
-          isSelected={tag === "Machine Learning"}
+          name="AI"
+          isSelected={tag === "AI"}
         />
       </div>
       <ul ref={ref} className="grid md:grid-cols-3 gap-8 md:gap-12">
