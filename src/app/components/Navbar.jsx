@@ -1,11 +1,11 @@
 "use client";
 import Link from "next/link";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Poppins } from 'next/font/google';
 import NavLink from "./NavLink";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/solid";
 import Menu from "./Menu";
-
+import { motion } from "framer-motion";
 
 const poppins = Poppins({
   weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'],
@@ -29,9 +29,31 @@ const navLinks = [
 
 const Navbar = () => {
   const [navbarOpen, setNavbarOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const isScrolled = window.scrollY > 10;
+      if (isScrolled !== scrolled) {
+        setScrolled(isScrolled);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [scrolled]);
 
   return (
-    <nav className="fixed mx-auto border-b border-[#33353F] top-0 left-0 right-0 z-10 bg-[#121212] bg-opacity-100">
+    <motion.nav 
+      initial={{ y: -100 }}
+      animate={{ y: 0 }}
+      transition={{ duration: 0.1 }}
+      className={`fixed mx-auto top-0 left-0 right-0 z-10 transition-all duration-300 ${
+        scrolled || navbarOpen
+          ? 'bg-[#121212]/90 backdrop-blur-md border-b border-white/10' 
+          : 'bg-transparent border-b border-transparent'
+      }`}
+    >
       <div className="flex container lg:py-4 flex-wrap items-center justify-between mx-auto px-4 py-2">
         <Link
           href={"/"}
@@ -67,7 +89,7 @@ const Navbar = () => {
         </div>
       </div>
       {navbarOpen ? <Menu links={navLinks} /> : null}
-    </nav>
+    </motion.nav>
   );
 };
 

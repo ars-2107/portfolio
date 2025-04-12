@@ -16,6 +16,18 @@
   }
 }
 
+@keyframes linear-gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
 @layer utilities {
   /* Hide scrollbar for Chrome, Safari and Opera */
   .no-scrollbar::-webkit-scrollbar {
@@ -46,6 +58,11 @@
   
   .scrollbar::-webkit-scrollbar-thumb:hover {
     background: #9b4d96;
+  }
+
+  .gradient-animation {
+    background-size: 200% 200%;
+    animation: linear-gradient 5s linear infinite alternate;
   }
 }
 
