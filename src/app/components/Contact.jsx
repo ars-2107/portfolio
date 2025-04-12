@@ -61,7 +61,7 @@ const Contact = () => {
           I&apos;ll make it a priority to respond promptly! Looking forward to connecting with you.
         </p>
         <div className="socials flex flex-row gap-4 my-8">
-          <Link href="https://www.x.com/in/ars2107_/">
+          <Link href="https://www.x.com/ars2107_/">
             <div className="border-2 border-transparent hover:border-purple-800 hover:shadow-[0_0_15px_theme('colors.purple.800')] transition-all duration-300 p-2 rounded-md">
               <Image src={XIcon} alt="X Icon" />
             </div>
