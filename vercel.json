@@ -2,7 +2,7 @@
   "rewrites": [
     {
       "source": "/hanginman/(.*)",
-      "destination": "https://hanginman.vercel.app/$1"
+      "destination": "https://hanginman.vercel.app"
     }
   ]
 }
