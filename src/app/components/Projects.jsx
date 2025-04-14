@@ -98,7 +98,7 @@ const Projects = () => {
           </motion.li>
         ))}
       </ul>
-      <section id="contact"></section>
+      <section id="playground"></section>
     </section>
   );
 };

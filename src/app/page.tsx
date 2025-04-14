@@ -2,6 +2,7 @@ import Hero from "./components/Hero";
 import Navbar from "./components/Navbar";
 import About from "./components/About";
 import Projects from "./components/Projects";
+import Playground from "./components/Playground";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import Achievements from "./components/Achievements";
@@ -19,6 +20,7 @@ export default function Home() {
         <Achievements />
         <About />
         <Projects />
+        <Playground />
         <Contact />
       </div>
       <Footer />
