@@ -1,12 +1,8 @@
 {
   "rewrites": [
     {
-      "source": "/hanginman",
-      "destination": "https://hanginman.vercel.app"
-    },
-    {
-      "source": "/hanginman/:path*",
-      "destination": "https://hanginman.vercel.app/:path*"
+      "source": "/hanginman/(.*)",
+      "destination": "https://hanginman-project.vercel.app/$1"
     }
   ]
 }
