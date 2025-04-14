@@ -1,12 +1,12 @@
 {
   "rewrites": [
     {
-      "source": "/hanginman",
-      "destination": "https://hanginman.vercel.app"
+      "source": "/hanginman:match(.*)",
+      "destination": "https://hanginman.vercel.app:match"
     },
     {
-      "source": "/hanginman/:path*",
-      "destination": "https://hanginman.vercel.app/:path*"
+      "source": "/hanginman/:match(.*)",
+      "destination": "https://hanginman.vercel.app/:match"
     }
   ]
 }
