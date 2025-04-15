@@ -7,6 +7,10 @@
     {
       "source": "/hanginman/:match(.*)",
       "destination": "https://hanginman.vercel.app/:match"
+    },
+    {
+      "source": "/hanginman/(.*)",
+      "destination": "https://hanginman.vercel.app/$1"
     }
   ]
 }
