@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 
 const playgroundItems = [
   {
-    title: "Hangman",
+    title: "Hangin' Man",
     path: "https://hanginman.apoorvsharma.space",
     description: "A fast-paced hangman game with modern UI and engaging gameplay.",
   },
