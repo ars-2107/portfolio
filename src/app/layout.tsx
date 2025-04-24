@@ -1,6 +1,8 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import { GoogleAnalytics } from '@next/third-parties/google'
+import { Analytics } from "@vercel/analytics/react"
+import Clarity from '@microsoft/clarity';
 import { format } from 'date-fns';
 import './globals.css'
 
@@ -10,10 +12,13 @@ const currentDate = new Date();
 currentDate.setHours(12, 0, 0, 0);
 const formattedDate = format(currentDate, "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'");
 
+const clarityProjectId = "r9c9leskum"
+Clarity.init(clarityProjectId);
+
 export const metadata: Metadata = {
-  title: 'Portfolio | ARS',
-  description: 'I&apos;m a detail-oriented Full Stack Developer with a creative approach and a strong problem-solving ability. My expertise spans a wide range of technologies, allowing me to build innovative solutions across web applications, mobile applications, and the fields of data science and machine learning. I enjoy tackling challenges head-on and turning ideas into practical, user-friendly solutions. Committed to continuous learning and collaboration, I bring a results-oriented approach to every project.',
-  keywords: ["Portfolio", "ARS", "Apoorv", "Sharma", "Apoorv Sharma", "Apoorv Sharma Space", "Full Stack Developer", "Web Applications", "Mobile Applications", "Data Science", "Machine Learning", "Innovative Products"],
+  title: 'Portfolio • ARS (Apoorv Sharma) • Software Developer',
+  description: 'I&apos;m a detail-oriented developer with expertise in web and mobile apps, data science, and machine learning, focused on building creative and innovative products.',
+  keywords: ["Portfolio", "ARS", "ARS Space", "ARS Portfolio", "Apoorv", "Sharma", "Apoorv Sharma", "Apoorv Sharma Space", "ARS Portfolio", "Dev", "Apps", "Developer", "Software Developer", "Full Stack Developer", "Web Applications", "Mobile Applications", "Data Science", "Machine Learning", "Innovative Products"],
   viewport: 'width=device-width, initial-scale=1',
   applicationName: 'ARS Portfolio',
   robots: {
@@ -25,15 +30,15 @@ export const metadata: Metadata = {
     googleBot: "index, follow"
   },
   openGraph: {
-    title: 'Portfolio | ARS',
-    description: 'I&apos;m a detail-oriented Full Stack Developer with a creative approach and a strong problem-solving ability. My expertise spans a wide range of technologies, allowing me to build innovative solutions across web applications, mobile applications, and the fields of data science and machine learning. I enjoy tackling challenges head-on and turning ideas into practical, user-friendly solutions. Committed to continuous learning and collaboration, I bring a results-oriented approach to every project.',
-    url: 'https://apoorvsharma.space',
+    title: 'Portfolio • ARS',
+    description: 'I&apos;m a detail-oriented developer with expertise in web and mobile apps, data science, and machine learning, focused on building creative and innovative products.',
+    url: 'https://www.apoorvsharma.space',
     siteName: 'ARS',
     locale: 'en_US',
     type: 'website',
     images: [
       {
-        url: '/images/ss/portfolio-preview.jpg',
+        url: '/images/ss/portfolio-preview.jpeg',
         width: 1200,
         height: 630,
         alt: 'ARS Portfolio',
@@ -43,27 +48,27 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Portfolio | ARS',
-    description: 'I&apos;m a detail-oriented Full Stack Developer with a creative approach and a strong problem-solving ability. My expertise spans a wide range of technologies, allowing me to build innovative solutions across web applications, mobile applications, and the fields of data science and machine learning. I enjoy tackling challenges head-on and turning ideas into practical, user-friendly solutions. Committed to continuous learning and collaboration, I bring a results-oriented approach to every project.',
-    images: ['/images/ss/portfolio-preview.jpg'],
+    title: 'Portfolio • ARS',
+    description: 'I&apos;m a detail-oriented developer with expertise in web and mobile apps, data science, and machine learning, focused on building creative and innovative products.',
+    images: ['/images/ss/portfolio-preview.jpeg'],
     creator: '@ars2107_',
     site: '@ars2107_',
   },
-  metadataBase: new URL('https://apoorvsharma.space'),
-  authors: [{ name: 'ARS', url: 'https://apoorvsharma.space' }],
+  metadataBase: new URL('https://www.apoorvsharma.space'),
+  authors: [{ name: 'ARS', url: 'https://www.apoorvsharma.space' }],
   other: {
     'article:published_time': '2024-02-09T12:00:00.000Z',
     'article:modified_time': formattedDate,
-    'article:author': 'https://apoorvsharma.space/',
+    'article:author': 'https://www.apoorvsharma.space/',
     charset: 'utf-8',
   },
   appleWebApp: {
     capable: true,
     statusBarStyle: 'black-translucent',
-    title: 'ARS Portfolio',
+    title: 'Portfolio • ARS',
     startupImage: [
       {
-        url: '/images/ss/portfolio-preview.jpg',
+        url: '/images/ss/portfolio-preview.jpeg',
         media: '(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3)',
       },
     ],
@@ -82,6 +87,16 @@ export const metadata: Metadata = {
       {
         url: "/images/favicon/favicon-32x32.png",
         sizes: "32x32",
+        type: "image/png"
+      },
+      {
+        url: "/images/favicon/favicon-48x48.png",
+        sizes: "48x48",
+        type: "image/png"
+      },
+      {
+        url: "/images/favicon/favicon-96x96.png",
+        sizes: "96x96",
         type: "image/png"
       },
       {
@@ -144,6 +159,9 @@ export const metadata: Metadata = {
       }
     ]
   },
+  alternates: {
+    canonical: "https://www.apoorvsharma.space"
+  }
 }
 
 export default function RootLayout({
@@ -156,6 +174,29 @@ export default function RootLayout({
       <link rel="icon" href="./favicon.ico" sizes="any" />
       <body className={inter.className}>{children}</body>
       <GoogleAnalytics gaId="G-MFTM9B1DE8" />
+      <Analytics />
+      <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "d8e1c6936bd4487bb49ab049cb88cd4f"}'></script>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{
+        __html: JSON.stringify({
+          "@context": "http://schema.org",
+          "@type": "Website",
+          "name": "ars",
+          "url": "https://www.apoorvsharma.space",
+          "description": "I&apos;m a detail-oriented developer with expertise in web and mobile apps, data science, and machine learning, focused on building creative and innovative products.",
+          "image": "https://www.apoorvsharma.space/images/hero.png",
+          "author": [
+            {
+              "@type": "Person",
+              "name": "Apoorv Sharma"
+            },
+          ],
+          "publisher": {
+            "@type": "Person",
+            "name": "Apoorv Sharma"
+          },
+          "screenshot": "https://www.apoorvsharma.space/images/ss/portfolio-preview.jpeg"
+        })
+      }} />
     </html>
   )
 }
