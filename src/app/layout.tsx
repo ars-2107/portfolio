@@ -5,6 +5,7 @@ import { Analytics } from "@vercel/analytics/react"
 import Clarity from '@microsoft/clarity';
 import { format } from 'date-fns';
 import './globals.css'
+import Script from 'next/script';
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -175,8 +176,15 @@ export default function RootLayout({
       <body className={inter.className}>{children}</body>
       <GoogleAnalytics gaId="G-MFTM9B1DE8" />
       <Analytics />
-      <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "d8e1c6936bd4487bb49ab049cb88cd4f"}'></script>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{
+      <Script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "d8e1c6936bd4487bb49ab049cb88cd4f"}' />
+      <Script id="clarity-script" type='text/javascript' dangerouslySetInnerHTML={{
+        __html: `(function(c,l,a,r,i,t,y){
+            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+        })(window, document, "clarity", "script", "r9c9leskum");`
+      }} />
+      <Script id="json-ld" type="application/ld+json" dangerouslySetInnerHTML={{
         __html: JSON.stringify({
           "@context": "http://schema.org",
           "@type": "Website",
