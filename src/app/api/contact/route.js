@@ -33,7 +33,7 @@ export async function POST(req) {
           <tr>
             <td style="background-color: #121212; color: white; padding: 2.7em 0 1.3em 0; text-align: center; border-top-left-radius: 10px; border-top-right-radius: 10px;">
               <h1>
-                <img src="https://i.ibb.co/Wnh5f8r/logo-white.png" alt="logo" border="0" width="120">
+                <img src="https://www.apoorvsharma.space/images/logos/logo-invert.png" alt="logo" border="0" width="120">
               </h1>
             </td>
           </tr>
@@ -66,28 +66,28 @@ export async function POST(req) {
               <table class="social-icons" style="margin: 0 auto;" cellspacing="0" cellpadding="0">
                 <tr>
                   <td>
-                    <a href="https://www.apoorvsharma.xyz/" target="_blank" style="text-decoration: none; margin: 0 0.5em;">
-                      <img src="https://i.ibb.co/XCRh6Fz/globe-solid.png" alt="globe-solid" border="0" style="width: 1.5em; height: 1.5em;">
+                    <a href="https://www.apoorvsharma.space/" target="_blank" style="text-decoration: none; margin: 0 0.5em;">
+                      <img src="https://www.apoorvsharma.space/images/socials/globe.png" alt="globe-solid" border="0" style="width: 1.5em; height: 1.5em;">
                     </a>
                   </td>
                   <td>
                     <a href="https://x.com/ars2107_/" target="_blank" style="text-decoration: none; margin: 0 0.5em;">
-                      <img src="https://i.ibb.co/HqF024H/x-twitter-brands.png" alt="x-twitter-brands" border="0" style="width: 1.5em; height: 1.5em;">
+                      <img src="https://www.apoorvsharma.space/images/socials/x.png" alt="x-twitter-brands" border="0" style="width: 1.5em; height: 1.5em;">
                     </a>
                   </td>
                   <td>
                     <a href="https://www.instagram.com/ars2107_/" target="_blank" style="text-decoration: none; margin: 0 0.5em;">
-                      <img src="https://i.ibb.co/cL0jW4m/instagram-brands.png" alt="instagram-brands" border="0" style="width: 1.5em; height: 1.5em;">
+                      <img src="https://www.apoorvsharma.space/images/socials/instagram.png" alt="instagram-brands" border="0" style="width: 1.5em; height: 1.5em;">
                     </a>
                   </td>
                   <td>
                     <a href="https://www.linkedin.com/in/apoorvsharma2107/" target="_blank" style="text-decoration: none; margin: 0 0.5em;">
-                      <img src="https://i.ibb.co/CJRY8L5/linkedin-brands.png" alt="linkedin-brands" border="0" style="width: 1.5em; height: 1.5em;">
+                      <img src="https://www.apoorvsharma.space/images/socials/linkedin.png" alt="linkedin-brands" border="0" style="width: 1.5em; height: 1.5em;">
                     </a>
                   </td>
                   <td>
                     <a href="https://github.com/ars-2107/" target="_blank" style="text-decoration: none; margin: 0 0.5em;">
-                      <img src="https://i.ibb.co/s5HTpkg/github-brands.png" alt="github-brands" border="0" style="width: 1.5em; height: 1.5em;">
+                      <img src="https://www.apoorvsharma.space/images/socials/github.png" alt="github-brands" border="0" style="width: 1.5em; height: 1.5em;">
                     </a>
                   </td>
                 </tr>
@@ -125,7 +125,7 @@ export async function POST(req) {
             <tr>
               <td style="background-color: #121212; color: white; padding: 2.7em 0 1.3em 0; text-align: center; border-top-left-radius: 10px; border-top-right-radius: 10px;">
                 <h1>
-                  <img src="https://i.ibb.co/Wnh5f8r/logo-white.png" alt="logo" border="0" width="120">
+                  <img src="https://www.apoorvsharma.space/images/logos/logo-invert.png" alt="logo" border="0" width="120">
                 </h1>
               </td>
             </tr>
@@ -158,28 +158,28 @@ export async function POST(req) {
                 <table class="social-icons" style="margin: 0 auto;" cellspacing="0" cellpadding="0">
                   <tr>
                     <td>
-                      <a href="https://www.apoorvsharma.xyz/" target="_blank" style="text-decoration: none; margin: 0 0.5em;">
-                        <img src="https://i.ibb.co/XCRh6Fz/globe-solid.png" alt="globe-solid" border="0" style="width: 1.5em; height: 1.5em;">
+                      <a href="https://www.apoorvsharma.space/" target="_blank" style="text-decoration: none; margin: 0 0.5em;">
+                        <img src="https://www.apoorvsharma.space/images/socials/globe.png" alt="globe-solid" border="0" style="width: 1.5em; height: 1.5em;">
                       </a>
                     </td>
                     <td>
                       <a href="https://x.com/ars2107_/" target="_blank" style="text-decoration: none; margin: 0 0.5em;">
-                        <img src="https://i.ibb.co/HqF024H/x-twitter-brands.png" alt="x-twitter-brands" border="0" style="width: 1.5em; height: 1.5em;">
+                        <img src="https://www.apoorvsharma.space/images/socials/x.png" alt="x-twitter-brands" border="0" style="width: 1.5em; height: 1.5em;">
                       </a>
                     </td>
                     <td>
                       <a href="https://www.instagram.com/ars2107_/" target="_blank" style="text-decoration: none; margin: 0 0.5em;">
-                        <img src="https://i.ibb.co/cL0jW4m/instagram-brands.png" alt="instagram-brands" border="0" style="width: 1.5em; height: 1.5em;">
+                        <img src="https://www.apoorvsharma.space/images/socials/instagram.png" alt="instagram-brands" border="0" style="width: 1.5em; height: 1.5em;">
                       </a>
                     </td>
                     <td>
                       <a href="https://www.linkedin.com/in/apoorvsharma2107/" target="_blank" style="text-decoration: none; margin: 0 0.5em;">
-                        <img src="https://i.ibb.co/CJRY8L5/linkedin-brands.png" alt="linkedin-brands" border="0" style="width: 1.5em; height: 1.5em;">
+                        <img src="https://www.apoorvsharma.space/images/socials/linkedin.png" alt="linkedin-brands" border="0" style="width: 1.5em; height: 1.5em;">
                       </a>
                     </td>
                     <td>
                       <a href="https://github.com/ars-2107/" target="_blank" style="text-decoration: none; margin: 0 0.5em;">
-                        <img src="https://i.ibb.co/s5HTpkg/github-brands.png" alt="github-brands" border="0" style="width: 1.5em; height: 1.5em;">
+                        <img src="https://www.apoorvsharma.space/images/socials/github.png" alt="github-brands" border="0" style="width: 1.5em; height: 1.5em;">
                       </a>
                     </td>
                   </tr>
