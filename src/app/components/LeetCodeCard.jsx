@@ -21,7 +21,7 @@ const LeetCodeCard = ({ stats, loadingStats }) => {
         <>
           <p className="text-md font-semibold text-white flex justify-between items-center">
             <div>
-              <Image src={LeetCodeIcon} alt={`Leetcode Icon`} className="mt-2 mx-2 mb-4 inline" width={36} height={36} />
+              <Image src={LeetCodeIcon} alt={`Leetcode Icon - ars portfolio apoorv sharma space developer`} className="mt-2 mx-2 mb-4 inline" width={36} height={36} />
               <h3 className="text-xl font-semibold text-white inline">ars2107_</h3>
             </div>
             <p className="text-md text-gray-500">#{stats.ranking}</p>

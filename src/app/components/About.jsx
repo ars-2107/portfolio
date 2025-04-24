@@ -92,7 +92,7 @@ const TAB_DATA = [
           { name: "Cloudflare", icon: CloudflareIcon },
         ].map((skill, index) => (
           <div key={index} className="bg-zinc-950 shadow-md rounded-lg p-4 flex flex-col items-center mb-4 border border-purple-800">
-            <Image src={skill.icon} alt={`${skill.name} Icon`} className="m-5 text-white fill-current" width={48} height={48} />
+            <Image src={skill.icon} alt={`${skill.name} Icon - ars portfolio apoorv sharma space developer`} className="m-5 text-white fill-current" width={48} height={48} />
             <span className="text-center text-white text-sm sm:text-base md:text-md lg:text-lg">{skill.name}</span>
           </div>
         ))}
@@ -208,7 +208,7 @@ const About = () => {
   return (
     <section className="text-white">
       <div className="md:grid md:grid-cols-2 gap-8 py-8 px-4 xl:gap-16 sm:py-16 xl:px-16">
-        <Image className="z-0" src="/images/about.png" alt="about" width={500} height={500} />
+        <Image className="z-0" src="/images/about.png" alt="about - ars portfolio apoorv sharma space developer" width={500} height={500} />
         <div className="mt-4 md:mt-0 text-left flex flex-col h-full">
           <h2 className="text-4xl font-bold text-white mb-4">About Me</h2>
           <p className="text-base lg:text-lg">
@@ -266,7 +266,7 @@ const About = () => {
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
                   src="https://github-readme-stats.vercel.app/api?username=ars-2107&theme=transparent&title_color=6b21a8&text_color=ffffff&icon_color=6b21a8&show_icons=true&hide_border=true"
-                  alt="GitHub Stats"
+                  alt="GitHub Stats - ars portfolio apoorv sharma space developer"
                   width={550}
                   height={200}
                   className={`bg-zinc-950 w-[550px] flex-none mx-5 shadow-md rounded-lg border border-purple-800 mb-4 ${roboto.className}`}
