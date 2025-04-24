@@ -1,0 +1,10 @@
+# *
+User-agent: *
+Allow: /
+Disallow:
+
+# Host
+Host: https://www.apoorvsharma.space/
+
+# Sitemaps
+Sitemap: https://www.apoorvsharma.space/sitemap.xml
