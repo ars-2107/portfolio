@@ -3,7 +3,7 @@
 
 This is my portfolio website, showcasing my skills, projects, and achievements. Crafted with Next.js and Tailwind CSS, it combines elegant design with responsiveness. Dive in and explore my creations!
 
-visit [apoorvsharma.xyz](https://apoorvsharma.xyz) to explore.
+visit [apoorvsharma.space](https://www.apoorvsharma.space) to explore.
 
 ## Built With
 
