@@ -1,9 +1,8 @@
 "use client";
-import React, { useTransition, useState, useEffect } from "react";
+import React, { useState, useTransition } from "react";
 import { Roboto } from 'next/font/google';
 import Image from "next/image";
 import TabButton from "./TabButton";
-import LeetCodeCard from "./LeetCodeCard";
 
 import AwsIcon from "../../../public/images/skills/aws-icon.svg";
 import BootstrapIcon from "../../../public/images/skills/bootstrap-icon.svg";
@@ -167,37 +166,11 @@ const TAB_DATA = [
       </div>
     ),
   },
-  {
-    title: "Stats",
-    id: "stats",
-    content: null,
-  },
 ];
 
 const About = () => {
   const [tab, setTab] = useState("skills");
   const [isPending, startTransition] = useTransition();
-  const [leetCodeStats, setLeetCodeStats] = useState(null);
-  const [loadingStats, setLoadingStats] = useState(true);
-
-  useEffect(() => {
-    if (tab === "stats") {
-      const fetchLeetCodeStats = async () => {
-        try {
-          const response = await fetch('https://leetcode-stats-api.herokuapp.com/ars2107_');
-          const data = await response.json();
-          if (data.status === "success") {
-            setLeetCodeStats(data);
-          }
-        } catch (error) {
-          console.error("Error fetching LeetCode stats:", error);
-        } finally {
-          setLoadingStats(false);
-        }
-      };
-      fetchLeetCodeStats();
-    }
-  }, [tab]);
 
   const handleTabChange = (id) => {
     startTransition(() => {
@@ -209,7 +182,7 @@ const About = () => {
     <section className="text-white">
       <div className="md:grid md:grid-cols-2 gap-8 py-8 px-4 xl:gap-16 sm:py-16 xl:px-16">
         <Image className="z-0" src="/images/about.png" alt="about - ars portfolio apoorv sharma space developer" width={500} height={500} />
-        <div className="mt-4 md:mt-0 text-left flex flex-col h-full">
+        <div className="mt-8 md:mt-0 text-left flex flex-col h-full">
           <h2 className="text-4xl font-bold text-white mb-4">About Me</h2>
           <p className="text-base lg:text-lg">
             I&apos;m a detail-oriented Full Stack Developer with a creative approach and a 
@@ -220,7 +193,7 @@ const About = () => {
             user-friendly solutions. Committed to continuous learning and collaboration, 
             I bring a results-oriented approach to every project.
           </p>
-          <div className="flex flex-col sm:flex-row xl:gap-5 sm:flex-wrap justify-start mt-8">
+          <div className="flex flex-row xl:gap-5 flex-wrap justify-start mt-8">
             <TabButton
               selectTab={() => handleTabChange("skills")}
               active={tab === "skills"}
@@ -249,30 +222,9 @@ const About = () => {
               {" "}
               Certifications{" "}
             </TabButton>
-            <TabButton
-              selectTab={() => handleTabChange("stats")}
-              active={tab === "stats"}
-            >
-              {" "}
-              Stats{" "}
-            </TabButton>
           </div>
           <div className="mt-8 ">
-            {tab === "skills" || tab === "education" || tab === "experience" || tab === "certifications" ? (
-              TAB_DATA.find((t) => t.id === tab).content
-            ) : (
-              <div className="max-w-[600px] pr-4 pb-2 flex overflow-x-auto scroll-smooth scrollbar scrollbar-thin scrollbar-thumb-purple-800 scrollbar-track-transparent scrollbar-rounded-md">
-                <LeetCodeCard stats={leetCodeStats} loadingStats={loadingStats} />
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
-                  src="https://github-readme-stats.vercel.app/api?username=ars-2107&theme=transparent&title_color=6b21a8&text_color=ffffff&icon_color=6b21a8&show_icons=true&hide_border=true"
-                  alt="GitHub Stats - ars portfolio apoorv sharma space developer"
-                  width={550}
-                  height={200}
-                  className={`bg-zinc-950 w-[550px] flex-none mx-5 shadow-md rounded-lg border border-purple-800 mb-4 ${roboto.className}`}
-                />
-              </div>
-            )}
+            {TAB_DATA.find((t) => t.id === tab).content}
           </div>
           <section id="projects"></section>
         </div>

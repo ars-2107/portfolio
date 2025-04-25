@@ -15,7 +15,7 @@ export default function Home() {
       <div id="stars2"></div>
       <div id="stars3"></div>
       <Navbar />
-      <div className="container mt-24 mx-auto px-12 py-4">
+      <div className="container mt-24 mx-auto px-6 py-4 md:px-12 md:py-6 sm:px-24 sm:py-8">
         <Hero />
         <Achievements />
         <About />

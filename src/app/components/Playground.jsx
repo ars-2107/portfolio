@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
+import { PersonStanding } from "lucide-react";
 
 const playgroundItems = [
   {
@@ -22,7 +23,7 @@ const Playground = () => {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.8, delay: 0.2 }}
-        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 pt-5"
       >
         {playgroundItems.map((item, index) => (
           <motion.div
@@ -44,7 +45,8 @@ const Playground = () => {
                 />
                 
                 <div className="relative z-0">
-                  <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-secondary-400 group-hover:to-secondary-600 transition-colors duration-300">
+                  <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-secondary-400 group-hover:to-secondary-600 transition-colors duration-300 flex items-center gap-2">
+                    <PersonStanding className="w-5 h-5 text-white group-hover:text-secondary-400" />
                     {item.title}
                   </h3>
                   <p className="text-[#ADB7BE] text-sm group-hover:text-white transition-colors duration-300">
