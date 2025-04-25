@@ -17,7 +17,7 @@ const clarityProjectId = "r9c9leskum"
 Clarity.init(clarityProjectId);
 
 export const metadata: Metadata = {
-  title: 'Portfolio • ARS (Apoorv Sharma) • Software Developer',
+  title: 'Portfolio | ARS (Apoorv Sharma), Software Developer',
   description: 'I&apos;m a detail-oriented developer with expertise in web and mobile apps, data science, and machine learning, focused on building creative and innovative products.',
   keywords: ["Portfolio", "ARS", "ARS Space", "ARS Portfolio", "Apoorv", "Sharma", "Apoorv Sharma", "Apoorv Sharma Space", "ARS Portfolio", "Dev", "Apps", "Developer", "Software Developer", "Full Stack Developer", "Web Applications", "Mobile Applications", "Data Science", "Machine Learning", "Innovative Products"],
   viewport: 'width=device-width, initial-scale=1',
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     googleBot: "index, follow"
   },
   openGraph: {
-    title: 'Portfolio • ARS',
+    title: 'Portfolio | ARS (Apoorv Sharma), Software Developer',
     description: 'I&apos;m a detail-oriented developer with expertise in web and mobile apps, data science, and machine learning, focused on building creative and innovative products.',
     url: 'https://www.apoorvsharma.space',
     siteName: 'ARS',
@@ -49,7 +49,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Portfolio • ARS',
+    title: 'Portfolio | ARS (Apoorv Sharma), Software Developer',
     description: 'I&apos;m a detail-oriented developer with expertise in web and mobile apps, data science, and machine learning, focused on building creative and innovative products.',
     images: ['/images/ss/portfolio-preview.jpeg'],
     creator: '@ars2107_',
@@ -66,7 +66,7 @@ export const metadata: Metadata = {
   appleWebApp: {
     capable: true,
     statusBarStyle: 'black-translucent',
-    title: 'Portfolio • ARS',
+    title: 'Portfolio | ARS (Apoorv Sharma), Software Developer',
     startupImage: [
       {
         url: '/images/ss/portfolio-preview.jpeg',
@@ -77,35 +77,47 @@ export const metadata: Metadata = {
   icons: {
     icon: [
       {
+        rel: "icon",
         url: "/images/favicon/favicon.ico",
         type: "image/x-icon"
       },
       {
+        rel: "icon",
+        url: "/images/favicon/favicon.svg",
+        type: "image/svg+xml"
+      },
+      {
+        rel: "icon",
         url: "/images/favicon/favicon-16x16.png",
         sizes: "16x16",
         type: "image/png"
       },
       {
+        rel: "icon",
         url: "/images/favicon/favicon-32x32.png",
         sizes: "32x32",
         type: "image/png"
       },
       {
+        rel: "icon",
         url: "/images/favicon/favicon-48x48.png",
         sizes: "48x48",
         type: "image/png"
       },
       {
+        rel: "icon",
         url: "/images/favicon/favicon-96x96.png",
         sizes: "96x96",
         type: "image/png"
       },
       {
+        rel: "icon",
         url: "/images/favicon/android-chrome-192x192.png",
         sizes: "192x192",
         type: "image/png"
       },
       {
+        rel: "icon",
         url: "/images/favicon/android-chrome-512x512.png",
         sizes: "512x512",
         type: "image/png"
@@ -113,56 +125,72 @@ export const metadata: Metadata = {
     ],
     shortcut: [
       {
+        rel: "shortcut icon",
         url: "/images/favicon/favicon.ico",
         type: "image/x-icon"
       }
     ],
     apple: [
       {
+        rel: "apple-icon",
+        url: "/images/favicon/apple-touch-icon.png",
+        sizes: "180x180",
+        type: "image/png"
+      },
+      {
+        rel: "apple-icon",
         url: "/images/favicon/apple-touch-icon-57x57.png",
         sizes: "57x57",
         type: "image/png"
       },
       {
+        rel: "apple-icon",
         url: "/images/favicon/apple-touch-icon-72x72.png",
         sizes: "72x72",
         type: "image/png"
       },
       {
+        rel: "apple-icon",
         url: "/images/favicon/apple-touch-icon-76x76.png",
         sizes: "76x76",
         type: "image/png"
       },
       {
+        rel: "apple-icon",
         url: "/images/favicon/apple-touch-icon-114x114.png",
         sizes: "114x114",
         type: "image/png"
       },
       {
+        rel: "apple-icon",
         url: "/images/favicon/apple-touch-icon-120x120.png",
         sizes: "120x120",
         type: "image/png"
       },
       {
+        rel: "apple-icon",
         url: "/images/favicon/apple-touch-icon-144x144.png",
         sizes: "144x144",
         type: "image/png"
       },
       {
+        rel: "apple-icon",
         url: "/images/favicon/apple-touch-icon-152x152.png",
         sizes: "152x152",
         type: "image/png"
       },
       {
+        rel: "apple-icon",
         url: "/images/favicon/apple-touch-icon-180x180.png",
         sizes: "180x180",
         type: "image/png"
       }
     ]
   },
+  manifest: "/images/favicon/site.webmanifest",
   alternates: {
     canonical: "https://www.apoorvsharma.space"
-  }
+  },
 }
 
 export default function RootLayout({
@@ -172,7 +200,24 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <link rel="icon" href="./favicon.ico" sizes="any" />
+      <head>
+        <link rel="icon" href="./images/favicon/favicon.svg" type="image/svg+xml" />
+        <link rel="icon" href="./images/favicon/favicon-16x16.png" sizes="16x16" type="image/png" />
+        <link rel="icon" href="./images/favicon/favicon-32x32.png" sizes="32x32" type="image/png" />
+        <link rel="icon" href="./images/favicon/favicon-48x48.png" sizes="48x48" type="image/png" />
+        <link rel="icon" href="./images/favicon/favicon-96x96.png" sizes="96x96" type="image/png" />
+        <link rel="icon" href="./images/favicon/android-chrome-192x192.png" sizes="192x192" type="image/png" />
+        <link rel="icon" href="./images/favicon/android-chrome-512x512.png" sizes="512x512" type="image/png" />
+        <link rel="apple-touch-icon" href="./images/favicon/apple-touch-icon.png" type='image/png'/>
+        <link rel="apple-touch-icon" href="./images/favicon/apple-touch-icon-57x57.png" sizes="57x57" type="image/png" />
+        <link rel="apple-touch-icon" href="./images/favicon/apple-touch-icon-72x72.png" sizes="72x72" type="image/png" />
+        <link rel="apple-touch-icon" href="./images/favicon/apple-touch-icon-76x76.png" sizes="76x76" type="image/png" />
+        <link rel="apple-touch-icon" href="./images/favicon/apple-touch-icon-114x114.png" sizes="114x114" type="image/png" />
+        <link rel="apple-touch-icon" href="./images/favicon/apple-touch-icon-120x120.png" sizes="120x120" type="image/png" />
+        <link rel="apple-touch-icon" href="./images/favicon/apple-touch-icon-144x144.png" sizes="144x144" type="image/png" />
+        <link rel="apple-touch-icon" href="./images/favicon/apple-touch-icon-152x152.png" sizes="152x152" type="image/png" />
+        <link rel="apple-touch-icon" href="./images/favicon/apple-touch-icon-180x180.png" sizes="180x180" type="image/png" />
+      </head>
       <body className={inter.className}>{children}</body>
       <GoogleAnalytics gaId="G-MFTM9B1DE8" />
       <Analytics />
