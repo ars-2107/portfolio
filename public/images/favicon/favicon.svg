@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 592 592" width="592" height="592">
+  <defs>
+    <linearGradient id="linearGradient21899">
+      <stop offset="0" style="stop-color:#f87171;stop-opacity:1;"/>
+      <stop offset="1" style="stop-color:#9333ea;stop-opacity:1"/>
+    </linearGradient>
+    <linearGradient id="linearGradient21901" xlink:href="#linearGradient21899" gradientUnits="userSpaceOnUse" x1="452.71278" y1="256.74631" x2="498.5795" y2="256.74631" gradientTransform="translate(8.8067093,43.213263)"/>
+  </defs>
+
+  <!-- Padded, rounded black background -->
+  <rect x="0" y="0" width="590" height="590" rx="70" ry="70" fill="black"/>
+
+  <g transform="translate(25,80)">
+    <text y="239.71686" x="0" style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:290px;line-height:1.25;font-family:Poppins;fill:#ffffff">
+      <tspan x="0" y="290.71686">ars</tspan>
+    </text>
+    <text y="239.95959" x="455" style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:282.667px;line-height:1.25;font-family:Poppins;fill:url(#linearGradient21901);fill-opacity:1;">
+      <tspan x="455" y="291.95959">.</tspan>
+    </text>
+  </g>
+</svg>
