@@ -91,7 +91,7 @@ const TAB_DATA = [
           { name: "Cloudflare", icon: CloudflareIcon },
         ].map((skill, index) => (
           <div key={index} className="bg-zinc-950 shadow-md rounded-lg p-4 flex flex-col items-center mb-4 border border-purple-800">
-            <Image src={skill.icon} alt={`${skill.name} Icon - ars portfolio apoorv sharma space developer`} className="m-5 text-white fill-current" width={48} height={48} />
+            <Image src={skill.icon} alt={`${skill.name} Icon - ars portfolio apoorv sharma space software developer`} className="m-5 text-white fill-current" width={48} height={48} />
             <span className="text-center text-white text-sm sm:text-base md:text-md lg:text-lg">{skill.name}</span>
           </div>
         ))}
@@ -181,7 +181,7 @@ const About = () => {
   return (
     <section className="text-white">
       <div className="md:grid md:grid-cols-2 gap-8 py-8 px-4 xl:gap-16 sm:py-16 xl:px-16">
-        <Image className="z-0" src="/images/about.png" alt="about - ars portfolio apoorv sharma space developer" width={500} height={500} />
+        <Image className="z-0" src="/images/about.png" alt="about - ars portfolio apoorv sharma space software developer" width={500} height={500} />
         <div className="mt-8 md:mt-0 text-left flex flex-col h-full">
           <h2 className="text-4xl font-bold text-white mb-4">About Me</h2>
           <p className="text-base lg:text-lg">

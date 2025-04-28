@@ -63,22 +63,22 @@ const Contact = () => {
         <div className="socials flex flex-row gap-4 my-8">
           <Link href="https://www.x.com/ars2107_/">
             <div className="border-2 border-transparent hover:border-purple-800 hover:shadow-[0_0_15px_theme('colors.purple.800')] transition-all duration-300 p-2 rounded-md">
-              <Image src={XIcon} alt="X Icon - ars portfolio apoorv sharma space developer" />
+              <Image src={XIcon} alt="X Icon - ars portfolio apoorv sharma space software developer" />
             </div>
           </Link>
           <Link href="https://www.instagram.com/ars2107_/">
             <div className="border-2 border-transparent hover:border-purple-800 hover:shadow-[0_0_15px_theme('colors.purple.800')] transition-all duration-300 p-2 rounded-md">
-              <Image src={InstagramIcon} alt="Instagram Icon - ars portfolio apoorv sharma space developer" />
+              <Image src={InstagramIcon} alt="Instagram Icon - ars portfolio apoorv sharma space software developer" />
             </div>
           </Link>
           <Link href="https://www.linkedin.com/in/apoorvsharma2107/">
             <div className="border-2 border-transparent hover:border-purple-800 hover:shadow-[0_0_15px_theme('colors.purple.800')] transition-all duration-300 p-2 rounded-md">
-              <Image src={LinkedinIcon} alt="Linkedin Icon - ars portfolio apoorv sharma space developer" />
+              <Image src={LinkedinIcon} alt="Linkedin Icon - ars portfolio apoorv sharma space software developer" />
             </div>
           </Link>
           <Link href="https://github.com/ars-2107/">
             <div className="border-2 border-transparent hover:border-purple-800 hover:shadow-[0_0_15px_theme('colors.purple.800')] transition-all duration-300 p-2 rounded-md">
-              <Image src={GithubIcon} alt="Github Icon - ars portfolio apoorv sharma space developer" />
+              <Image src={GithubIcon} alt="Github Icon - ars portfolio apoorv sharma space software developer" />
             </div>
           </Link>
         </div>
