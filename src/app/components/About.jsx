@@ -185,10 +185,10 @@ const About = () => {
         <div className="mt-8 md:mt-0 text-left flex flex-col h-full">
           <h2 className="text-4xl font-bold text-white mb-4">About Me</h2>
           <p className="text-base lg:text-lg">
-            I&apos;m a detail-oriented Full Stack Developer with a creative approach and a 
+            I&apos;m a detail-oriented Software Developer with a creative approach and a 
             strong problem-solving ability. My expertise spans a wide range of 
             technologies, allowing me to build innovative solutions across web 
-            applications, mobile applications, and the fields of data science and machine 
+            applications, mobile applications, and in the fields of data science and machine 
             learning. I enjoy tackling challenges head-on and turning ideas into practical, 
             user-friendly solutions. Committed to continuous learning and collaboration, 
             I bring a results-oriented approach to every project.
