@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
-import { GoogleAnalytics } from '@next/third-parties/google'
+import { GoogleAnalytics, GoogleTagManager } from '@next/third-parties/google'
 import { Analytics } from "@vercel/analytics/react"
 import Clarity from '@microsoft/clarity';
 import { format } from 'date-fns';
@@ -220,6 +220,7 @@ export default function RootLayout({
       </head>
       <body className={inter.className}>{children}</body>
       <GoogleAnalytics gaId="G-MFTM9B1DE8" />
+      <GoogleTagManager gtmId="GTM-T29D38NR" />
       <Analytics />
       <Script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "d8e1c6936bd4487bb49ab049cb88cd4f"}' />
       <Script id="clarity-script" type='text/javascript' dangerouslySetInnerHTML={{
