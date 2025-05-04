@@ -217,6 +217,8 @@ export default function RootLayout({
         <link rel="apple-touch-icon" href="./images/favicon/apple-touch-icon-144x144.png" sizes="144x144" type="image/png" />
         <link rel="apple-touch-icon" href="./images/favicon/apple-touch-icon-152x152.png" sizes="152x152" type="image/png" />
         <link rel="apple-touch-icon" href="./images/favicon/apple-touch-icon-180x180.png" sizes="180x180" type="image/png" />
+
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9493613665596791" crossOrigin="anonymous"></script>
       </head>
       <body className={inter.className}>{children}</body>
       <GoogleAnalytics gaId="G-MFTM9B1DE8" />
